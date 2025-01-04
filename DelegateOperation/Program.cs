@@ -6,14 +6,14 @@ namespace DelegateOperation
 	{
 		static void Main(string[] args)
 		{
-			Operation Operation1 = Minus;
-			Operation Operation2 = Plus;
-			Console.WriteLine(Operation1(2, 2));
-			Console.WriteLine(Operation1(2, 2));
+			Operation minus = MinusForDelegate;
+			Operation plus = PlusForDelegate;
+			Console.WriteLine(minus(2, 2));
+			Console.WriteLine(plus(2, 2));
 		}
 
-		public static int Plus(int a, int b) => a + b;
-		public static int Minus(int a, int b) => a - b;
+		public static int PlusForDelegate(int a, int b) => a + b;
+		public static int MinusForDelegate(int a, int b) => a - b;
 		public delegate int Operation(int x, int y);
 	}
 }
